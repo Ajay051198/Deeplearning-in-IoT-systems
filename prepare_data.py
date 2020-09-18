@@ -116,6 +116,7 @@ def load_data(filename):
             Xi.append(obs2idx[sensor + str(values[_entry])])
         Yi.append(act2idx[catActivies[_entry]])
 
+    series = Xi
     X = []
     Y = []
 
@@ -135,7 +136,7 @@ def load_data(filename):
                 Y.append(y)
             X.append(x)
 
-    return X, Y, (idx2act, idx2obs, act2idx, obs2idx)
+    return X, Y, (idx2act, idx2obs, act2idx, obs2idx), series
 
 
 if __name__ == "__main__":
@@ -143,12 +144,13 @@ if __name__ == "__main__":
     file = "./Data/cairo"
     print(f"File >> {file}")
 
-    X, Y, enc_dec = load_data(file)
+    X, Y, enc_dec, series = load_data(file)
     print('Saving file')
     # convert to numpy arrays
     X = np.array(X, dtype=object)
     Y = np.array(Y, dtype=object)
     enc_dec = np.array(enc_dec, dtype=object)
+    series = np.array(series, dtype=object)
     X = sequence.pad_sequences(X, maxlen=config.MAX_LEN, dtype=np.int32)
 
     save_to = f"./PP_Data/{file.split('/')[-1]}"
@@ -156,5 +158,6 @@ if __name__ == "__main__":
     np.save(save_to + '_X.npy', X)
     np.save(save_to + '_Y.npy', Y)
     np.save(save_to + '_ENCDEC.npy', enc_dec)
+    np.save(save_to + '_series.npy', series)
 
     print('done')
