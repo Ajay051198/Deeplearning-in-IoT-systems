@@ -67,9 +67,9 @@ Activity mapping based on common sensor activations:
 - [SKIP] This is followed by a code, which is written to split, train, evalute and present report all at once in a sequence.
 - At the end, following the #RUN code cell. The report is presented. 
 - This containes the frequency distribution of the activities in training and test set
-- followed by pre training classification report of the predictions (training and test set)
+- followed by pre training confusion matrix of the predictions (training and test set)
 - followed by KFold training and evaluation after every fold
 - followed by plotting of the accuracy, valadation accuracy against epochs 
 - followed by plotting of the loss, validation loss against epochs 
 - followed by total accuracy on test set 
-- and finally a classification report of the predictions after trainined
+- and finally a confusion matrix of the predictions after trainined
