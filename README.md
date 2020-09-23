@@ -64,7 +64,7 @@ Activity mapping based on common sensor activations:
 
 ### How to read the experiment notebooks: 
 - A description of the model architecture and choice of hyperparameters are given at the top of the notebook
-- [SKIP] This is followed by a code, which is written to split, train, evalute and present report all at in a sequence.
+- [SKIP] This is followed by a code, which is written to split, train, evalute and present report all at once in a sequence.
 - At the end, following the #RUN code cell. The report is presented. 
 - This containes the frequency distribution of the activities in training and test set
 - followed by pre training classification report of the predictions (training and test set)
