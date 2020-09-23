@@ -61,3 +61,15 @@ Activity mapping based on common sensor activations:
 | R2 wake           |    Wake up |
 
 ---
+
+### How to read the experiment notebooks: 
+- A description of the model architecture and choice of hyperparameters are given at the top of the notebook
+- [SKIP] This is followed by a code, which is written to split, train, evalute and present report all at in a sequence.
+- At the end, following the #RUN code cell. The report is presented. 
+- This containes the frequency distribution of the activities in training and test set
+- followed by pre training classification report of the predictions (training and test set)
+- followed by KFold training and evaluation after every fold
+- followed by plotting of the accuracy, valadation accuracy against epochs 
+- followed by plotting of the loss, validation loss against epochs 
+- followed by total accuracy on test set 
+- and finally a classification report of the predictions after trainined
