@@ -9,22 +9,41 @@ from keras.preprocessing import sequence
 from datetime import datetime
 from tqdm import tqdm
 
-categorizeActivites = {'cairo': {
-    "": "Other",
-    "Bed to toilet": "Use Toiltet",
-    "R1 wake": "Wake",
-    "R2 wake": "Wake",
-    "Night wandering": "Other",
-    "R1 work in office": "Work",
-    "Laundry": "Work",
-    "R2 take medicine": "Take_medicine",
-    "R1 sleep": "Sleep",
-    "R2 sleep": "Sleep",
-    "Leave home": "Leave_Home",
-    "Breakfast": "Eat",
-    "Dinner": "Eat",
-    "Lunch": "Eat",
-}}
+categorizeActivites = {
+    'cairo': {
+        "": "Other",
+        "Bed to toilet": "Use Toiltet",
+        "R1 wake": "Wake",
+        "R2 wake": "Wake",
+        "Night wandering": "Other",
+        "R1 work in office": "Work",
+        "Laundry": "Work",
+        "R2 take medicine": "Take_medicine",
+        "R1 sleep": "Sleep",
+        "R2 sleep": "Sleep",
+        "Leave home": "Leave_Home",
+        "Breakfast": "Eat",
+        "Dinner": "Eat",
+        "Lunch": "Eat",
+    },
+    "milan": {
+        "": "Other",
+        "Master_Bedroom_Activity": "Other",
+        "Meditate": "Other",
+        "Chores": "Work",
+        "Desk_Activity": "Work",
+        "Morning_Meds": "Take_medicine",
+        "Eve_Meds": "Take_medicine",
+        "Sleep": "Sleep",
+        "Read": "Relax",
+        "Watch_TV": "Relax",
+        "Leave_Home": "Leave_Home",
+        "Dining_Rm_Activity": "Eat",
+        "Kitchen_Activity": "Cook",
+        "Bed_to_Toilet": "Bed_to_toilet",
+        "Master_Bathroom": "Bathing",
+        "Guest_Bathroom": "Bathing"},
+}
 
 
 def load_data(filename):
@@ -141,7 +160,7 @@ def load_data(filename):
 
 if __name__ == "__main__":
     print('Preparing data')
-    file = "./Data/cairo"
+    file = "./Data/milan"
     print(f"File >> {file}")
 
     X, Y, enc_dec, series = load_data(file)
