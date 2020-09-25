@@ -28,21 +28,21 @@ categorizeActivites = {
     },
     "milan": {
         "": "Other",
-        "Master_Bedroom_Activity": "Other",
-        "Meditate": "Other",
+        "Master_Bedroom_Activity": "Master",
+        "Meditate": "Meditate",
         "Chores": "Work",
         "Desk_Activity": "Work",
         "Morning_Meds": "Take_medicine",
         "Eve_Meds": "Take_medicine",
         "Sleep": "Sleep",
-        "Read": "Relax",
-        "Watch_TV": "Relax",
+        "Read": "Read",
+        "Watch_TV": "Watch_TV",
         "Leave_Home": "Leave_Home",
         "Dining_Rm_Activity": "Eat",
         "Kitchen_Activity": "Cook",
-        "Bed_to_Toilet": "Bed_to_toilet",
-        "Master_Bathroom": "Bathing",
-        "Guest_Bathroom": "Bathing"},
+        "Bed_to_Toilet": "Use Toilet",
+        "Master_Bathroom": "Master_Bath_use",
+        "Guest_Bathroom": "Guest_Bath_use"},
 }
 
 
