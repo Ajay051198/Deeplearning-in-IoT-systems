@@ -1,5 +1,5 @@
 import numpy as np
-file_name = "milan"
+file_name = input("enter file name")
 path = f"./PP_Data/{file_name}"
 
 X = np.load(f"{path}_X.npy", allow_pickle=True)
@@ -24,6 +24,7 @@ series = np.load(f"{path}_series.npy", allow_pickle=True)
 
 #Test 3
 print(idx2act)
+print(f"Size >> {len(X)}")
 print()
 print("ENCODING DIM >> ")
 print(len(set(obs2idx.values())))

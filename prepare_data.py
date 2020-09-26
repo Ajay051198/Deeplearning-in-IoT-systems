@@ -43,6 +43,22 @@ categorizeActivites = {
         "Bed_to_Toilet": "Use Toilet",
         "Master_Bathroom": "Master_Bath_use",
         "Guest_Bathroom": "Guest_Bath_use"},
+
+    "kyoto7": {
+        "R1_Bed_to_Toilet": "Use Toilet",
+        "R2_Bed_to_Toilet": "Use Toilet",
+        "Meal_Preparation": "Cook",
+        "R1_Personal_Hygiene": "Personal_hygiene",
+        "R2_Personal_Hygiene": "Personal_hygiene",
+        "Watch_TV": "Watch TV",
+        "R1_Sleep": "Sleep",
+        "R2_Sleep": "Sleep",
+        "Clean": "Other",
+        "R1_Work": "Work",
+        "R2_Work": "Work",
+        "Study": "Study",
+        "Wash_Bathtub": "Other",
+        "": "Other"},
 }
 
 
@@ -160,7 +176,8 @@ def load_data(filename):
 
 if __name__ == "__main__":
     print('Preparing data')
-    file = "./Data/milan"
+    name = input('Enter dataset name: ')
+    file = f"./Data/{name}"
     print(f"File >> {file}")
 
     X, Y, enc_dec, series = load_data(file)
