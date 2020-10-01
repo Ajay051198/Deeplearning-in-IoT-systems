@@ -12,10 +12,10 @@ series = np.load(f"{path}_series.npy", allow_pickle=True)
 
 #Test1
 
-# idx = int(input('Enter index: '))
-# print('-'*88)
-# print(f"X-> {X[idx]}, tot: {len(X[idx])}")
-# print(f"Y-> {Y[idx]}")
+idx = int(input('Enter index: '))
+print('-'*88)
+print(f"X-> {X[idx]}, tot: {len(X[idx])}")
+print(f"Y-> {Y[idx]}")
 # print(act2idx)
 
 #Test2

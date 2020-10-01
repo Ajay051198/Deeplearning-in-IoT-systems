@@ -2,11 +2,12 @@
 
 | Architecture  | Hyperparams                                                                                          | Cairo: validation accuracy | Cairo: Test accuracy | Milan: validation accuracy | Milan: Test accuracy | kyoto7: validation accuracy | kyoto7: Test accuracy |
 | ------------- | ---------------------------------------------------------------------------------------------------- | -------------------------- | -------------------- | -------------------------- | -------------------- | --------------------------- | --------------------- |
-| LSTM          | EPOCHS: 50 \| EMBEDDING SIZE: 1000 (high dim) \| ADAM lr = 0.001                                     | 83.24                      | 77.88                |                            |                      |                             |                       |
+| LSTM          | EPOCHS: 50 \| EMBEDDING SIZE: 1000 (high dim) \| ADAM lr = 0.001                                     | 83.24                      | 77.88                | 89.15                            | 88.97                     | 68.14                               | 73.44                    | 
 | biLSTM        | EPOCHS: 50 \| EMBEDDING SIZE: 1000 (high dim) \| ADAM lr = 0.001                                     | 91.34                      | 89.43                |                            |                      | 79.65                       | 73.44                 |
 | biLSTM        | EPOCHS: 30 \| EMBEDDING SIZE: 1000 (high dim) \| ADAM lr = 0.001                                     |                            |                      | 94.12                      | 94.84                | 73.45                       | 68.75                 |
 | biLSTM        | EPOCHS: 30 \| EMBEDDING SIZE: 104 (total number of unique sensor activations + 1) \| ADAM lr = 0.001 | 90.27                      | 82.27                |                            |                      |                             |                       |
-| biLSTM        | EPOCHS: 30 \| EMBEDDING SIZE: 104 (total number of unique sensor activations + 1) \| ADAM lr = 0.005 |                            |                      |                            |                      |                             |                       |
+| biLSTM        | EPOCHS: 30 \| EMBEDDING SIZE: 104 (total number of unique sensor activations + 1) \| ADAM lr = 0.005 | 85.2                      | 87.5                     |                            |                      |                             |                       |
+| cascadedSLSTM | EPOCHS: 30 \| EMBEDDING SIZE: 104 (total number of unique sensor activations + 1) \| ADAM lr = 0.001 | 71.89                     | 63.89              |                            |                      |                             |                       |
 | cascadedSLSTM | EPOCHS: 30 \| EMBEDDING SIZE: 104 (total number of unique sensor activations + 1) \| ADAM lr = 0.005 | 82.28                      | 77.88                |                            |                      |                             |                       |
 
   
@@ -35,6 +36,7 @@ After gaining an understanding of this, we tried out different datasets of diffe
 - The model failed to perform well when there wasn't much data. This trend can be observed in the variation in performance in the three different datasets of different sizes.
 - In the case of kyoto7, the model failed to perform well even when the task was simpler because of not enough data.
 - In the case of Milan, the model performed well, even with the task being the toughest because there were sufficient data for the model to learn the general sequences for the activities.
+- optimal lr = 0.001, any higher the model starts to diverge from global minima
 
 **_NOTE:_**
 
